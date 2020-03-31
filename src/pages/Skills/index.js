@@ -21,7 +21,7 @@ const Skills = () =>{
         <SkillWrapper className='wrapper'>
             <Div>
             <div>
-                <img src={js}/>
+                <img src={js} alt="javascript"/>
                 <h2>javascript</h2>
             </div>
                 <p>Essa é a linguagem que mais uso e estudo.</p>
@@ -31,7 +31,7 @@ const Skills = () =>{
             </Div>
             <Div>
             <div>
-                <img src={web}/>
+                <img src={web} alt="HTML/CSS"/>
                 <h2>HTML5 + CSS </h2>
             </div>
                 <p>Tenho bom desenvolvimento com html e css. Foi por onde comecei.</p>
@@ -41,7 +41,7 @@ const Skills = () =>{
             </Div>
             <Div>
             <div>
-                <img src={node}/>
+                <img src={node} alt="nodejs"/>
                 <h2>NodeJs</h2>
             </div>
                 <p>Desnvolvo APIs com certa facilidade, mas estou me desenvolvendo ainda.</p>
@@ -51,7 +51,7 @@ const Skills = () =>{
             </Div>
             <Div>
             <div>
-                <img src={react}/>
+                <img src={react} alt="react"/>
                 <h2>React</h2>
             </div>
                 <p>Este site foi feito com React. É das tecnologias que mais gosto.</p>
@@ -61,7 +61,7 @@ const Skills = () =>{
             </Div>
             <Div>
             <div>
-                <img src={mysql}/>
+                <img src={mysql} alt="mysql"/>
                 <h2>MySql</h2>
             </div>
                 <p>Tenho conhecimentos médios em Bancos SQL e NO-SQL(MongoDb)</p>
@@ -71,7 +71,7 @@ const Skills = () =>{
             </Div>
             <Div>
             <div>
-                <img src={python}/>
+                <img src={python} alt="python"/>
                 <h2>Python</h2>
             </div>
                 <p>Aprendi lógica de programação e aprendi um pouco de IA com Python</p>
