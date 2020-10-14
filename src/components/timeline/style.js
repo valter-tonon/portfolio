@@ -23,7 +23,7 @@ export const DivLeft = styled.div `
     justify-content:flex-start;
     padding-top:10px;
     z-index:1;
-    
+    background: #272937;
     
 
     
@@ -36,6 +36,7 @@ export const DivRight = styled.div `
     border-left:1px solid  #F77B57;
     justify-content:flex-start;
     padding-top: 120px;
+    background: #272937;
     
 `
 
@@ -113,6 +114,7 @@ export const DivR = styled.div `
     .icon{
         margin-top: 50px;
         background: none;
+        z-index: 1000;
     }
 
     span{
@@ -160,6 +162,7 @@ export const Div = styled.div `
     border-radius: 4px;
     position: relative;
     .iconL{
+        display: hidden;
         margin-top: 40px;
         align-self: flex-end;
         background: none;
@@ -208,5 +211,45 @@ export const Div = styled.div `
         margin-left: 30px;
     }
 
+
+`
+export const Div2 = styled.div ` 
+    align-self: flex-end;
+    display: flex;
+    background: none;
+    flex-direction:column;
+    width: 300px;
+    height: 50px;
+    margin: -50px 0px 0px 0;
+    border-radius: 4px;
+    position: relative;
+    .iconL1{
+        margin-top: -16px;
+        align-self: flex-end;
+        background: none;
+    }
+
+    span{
+        align-self: flex-end;
+        background:#1fa1f2;
+        width:60px;
+        height:60px;
+        border-radius: 50%;
+        justify-content: center;
+        margin-right: -35px;
+        
+
+        svg{
+            filter:drop-shadow(1px 1px 5px #222);
+        } 
+    
+    }
+
+    
+    img{
+        width: 100px;
+        height: 100px;
+    }
+   
 
 `

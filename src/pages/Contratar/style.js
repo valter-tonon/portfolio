@@ -9,6 +9,7 @@ export const Wrapper = styled.form `
     justify-content: center;
     align-items: center;
     overflow: auto;
+    
 
     form{
         display: flex;
