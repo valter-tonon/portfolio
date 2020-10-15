@@ -13,18 +13,23 @@ export const SideWrapper = styled.section `
     border-right:1px solid #666;
     font-family: 'Sen', sans-serif;
     
+    
 
     img{
         width: 8rem;
         height:8rem;
         background:none;
         border-radius: 6px;
+        margin-bottom: 20px;
     }
 
     h1{
         color: #fff;
         background: none;
         margin-top: 2rem;
+    }
+    h2{
+        color:#fff;
     }
     h3{
         color: #F77B57;

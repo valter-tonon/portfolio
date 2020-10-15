@@ -1,11 +1,17 @@
 import React,{ useEffect } from 'react'
-import { CircularProgressbar } from 'react-circular-progressbar';
+
 import js from '../../assets/images/javascript.png'
 import web from '../../assets/images/unnamed.png'
 import node from '../../assets/images/nodejs_logo.png'
 import react from '../../assets/images/react.svg'
 import mysql from '../../assets/images/mysql.png'
 import python from '../../assets/images/python-logo.png'
+import php from '../../assets/images/php-logo.png'
+import reactnative from '../../assets/images/react-native.png'
+import mongo from '../../assets/images/mongo.png'
+import salesforce from '../../assets/images/angularjs-logo.png'
+import wordpress from '../../assets/images/WordPress.png'
+import graphql from '../../assets/images/Moby.png'
 import { SkillWrapper, Div } from './style'
 import { TweenMax } from 'gsap'
 
@@ -16,67 +22,93 @@ const Skills = () =>{
         TweenMax.from('.wrapper', 2,{
             opacity:0
         })
-   })
+   },[])
     return (
         <SkillWrapper className='wrapper'>
             <Div>
             <div>
-                <img src={js}/>
+                <img src={js} alt="javascript"/>
                 <h2>javascript</h2>
             </div>
-                <p>Essa é a linguagem que mais uso e estudo.</p>
-                <div >
-                    <CircularProgressbar value={75} text={`75%`} />
-                </div>
+                
+                
+                  
+                
             </Div>
             <Div>
             <div>
-                <img src={web}/>
+                <img src={web} alt="HTML/CSS"/>
                 <h2>HTML5 + CSS </h2>
             </div>
-                <p>Tenho bom desenvolvimento com html e css. Foi por onde comecei.</p>
-                <div >
-                    <CircularProgressbar value={90} text={`90%`} />
-                </div>
+                
+              
             </Div>
             <Div>
             <div>
-                <img src={node}/>
+                <img src={node} alt="nodejs"/>
                 <h2>NodeJs</h2>
             </div>
-                <p>Desnvolvo APIs com certa facilidade, mas estou me desenvolvendo ainda.</p>
-                <div >
-                    <CircularProgressbar value={55} text={`55%`} />
-                </div>
+              
+              
             </Div>
             <Div>
             <div>
-                <img src={react}/>
+                <img src={react} alt="react"/>
                 <h2>React</h2>
             </div>
-                <p>Este site foi feito com React. É das tecnologias que mais gosto.</p>
-                <div >
-                    <CircularProgressbar value={70} text={`70%`} />
-                </div>
+              
+               
             </Div>
             <Div>
             <div>
-                <img src={mysql}/>
+                <img src={mysql} alt="mysql"/>
                 <h2>MySql</h2>
             </div>
-                <p>Tenho conhecimentos médios em Bancos SQL e NO-SQL(MongoDb)</p>
+                
                 <div >
-                    <CircularProgressbar value={50} text={`50%`} />
+                 
                 </div>
             </Div>
             <Div>
             <div>
-                <img src={python}/>
+                <img src={python} alt="python"/>
                 <h2>Python</h2>
             </div>
-                <p>Aprendi lógica de programação e aprendi um pouco de IA com Python</p>
-                <div >
-                    <CircularProgressbar value={40} text={`40%`} />
+            </Div>
+            <Div>
+                <div>
+                    <img src={php} alt="python"/>
+                    <h2>Php</h2>
+                </div>
+            </Div>
+            <Div>
+                <div>
+                    <img src={reactnative} alt="python"/>
+                    <h2>React-Native</h2>
+                </div>
+            </Div>
+            <Div>
+                <div>
+                    <img src={mongo} alt="python"/>
+                    <h2>MongoDB</h2>
+                </div>
+            </Div>
+            <Div>
+                <div>
+                    <img src={salesforce} alt="python"/>
+                    <h2>AngularJs</h2>
+                </div>
+            </Div>
+            <Div>
+                <div>
+                    <img src={wordpress} alt="python"/>
+                    <h2>WordPress</h2>
+                </div>
+            </Div>
+            <Div>
+                <div>
+                    <img src={graphql} alt="python"/>
+                    <h2>Docker</h2>
                 </div>
             </Div>
         </SkillWrapper>
