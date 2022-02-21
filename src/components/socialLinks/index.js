@@ -1,18 +1,29 @@
-import React from 'react'
-import {LinkedinSquare} from '@styled-icons/boxicons-logos/LinkedinSquare'
-import { Github } from '@styled-icons/boxicons-logos/Github'
-import { InstagramAlt } from '@styled-icons/boxicons-logos/InstagramAlt'
-import { WhatsappSquare } from '@styled-icons/boxicons-logos/WhatsappSquare'
+import React, {useEffect} from 'react'
+import {SocialWrapper} from './style'
+import {httpApi} from "../../utils/http/http-axios";
+import {getSocialLinkLogos} from "../../Enums/socialLinks";
+import {toArray} from "gsap/gsap-core";
 
-import { SocialWrapper } from './style'
 
 const Social = () =>{
+    const [links, setLinks] = React.useState({});
+    useEffect(() => {
+        httpApi.get('/social-links').then(res => {
+            setLinks(res.data);
+        });
+    }, []);
+    console.log(Object.entries(links));
     return(
         <SocialWrapper>
-            <span><a className="linkedin" href="https://www.linkedin.com/in/valter-tonon-5a8986162/" target='blank'><LinkedinSquare width='50px'/></a></span>
-            <span><a className="github" href="https://github.com/valter-tonon" target='blank'><Github width='50px'/></a></span>
-            <span><a className="instagram" href="https://www.instagram.com/valtertonon/" target='blank'><InstagramAlt width='50px'/></a></span>
-            <span><a className="whats" href=" https://wa.me/5547992752417?text=Olá!!!" target='blank'><WhatsappSquare width='50px'/></a></span>
+            {
+                Object.entries(links).map(([key, value]) => {
+                    return(
+                        <a key={key} className={value.name} href={value.url} target="_blank" rel="noopener noreferrer">
+                            {getSocialLinkLogos(value.name)}
+                        </a>
+                    )
+                })
+            }
         </SocialWrapper>
     )
 }

@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
-export const AvatarWrapper = styled.div `
-    width: 1.5rem;
-    height: 1.5rem;
+export const AvatarWrapper = styled.img `
     border-radius:6px;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: top;
+
 `

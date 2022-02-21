@@ -14,7 +14,7 @@ export const SocialWrapper = styled.div `
             color:#0077B5;
         }
     }
-    .whats{
+    .whatsapp{
         color: #999;
         background: none;
         padding: 8px;

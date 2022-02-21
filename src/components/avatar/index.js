@@ -1,12 +1,9 @@
 import React from 'react'
-import avatar from '../../assets/images/portfolii.jpg'
-//import { AvatarWrapper } from './style'
+import {AvatarWrapper} from "./style";
 
-const Avatar = () =>{
+const Avatar = (props) =>{
     return(
-        
-            <img src={avatar} alt="perfil avatar"/>
-    
+        <AvatarWrapper src={`${process.env.REACT_APP_API_HOST}/storage/${props.urlImage}`} alt=""/>
     )
 }
 

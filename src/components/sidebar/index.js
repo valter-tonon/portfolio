@@ -1,19 +1,28 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {SideWrapper} from './style'
 import Avatar from '../avatar'
 import Social from '../socialLinks'
 import MenuLinks from '../menu/menuLinks'
+import {httpApi} from "../../utils/http/http-axios";
 //import { logo } from '../assets/images/'
 
 const SideBar = () =>{
 
+    const [user, setUser] = useState({})
+
+    useEffect(() => {
+        httpApi.get('user-info').then(res => {
+            setUser(res.data)
+        })
+    },[])
+
     return (
         <SideWrapper>
-            <Avatar/>
-            <h2>Valter L. Tonon</h2>
-            <h3>Desenvolvedor FullStack</h3>
-            <p>contato@valtertonon.tech</p>
-            <p>+55 (47)99275-2417</p>
+            <Avatar urlImage = { user.avatar }/>
+            <h2>{user.name}</h2>
+            <h3>{user.title}</h3>
+            <p>{user.email}</p>
+            <p>+55 {user.phone}</p>
             <Social/>
             <MenuLinks/>
         </SideWrapper>

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div ` 
-    padding: 40px 150px;
+    padding: 20px 150px;
     color: #999;
     display: flex;
     flex-direction: column;
@@ -12,9 +12,11 @@ export const Wrapper = styled.div `
         color: #F77B57;
     }
 
-    p{
-        margin-top: 10px;
-        text-indent: 20px;
+    span{
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        text-indent: 40px;
         font-size: 20px;
 
     }
