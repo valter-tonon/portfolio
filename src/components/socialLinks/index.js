@@ -2,8 +2,6 @@ import React, {useEffect} from 'react'
 import {SocialWrapper} from './style'
 import {httpApi} from "../../utils/http/http-axios";
 import {getSocialLinkLogos} from "../../Enums/socialLinks";
-import {toArray} from "gsap/gsap-core";
-
 
 const Social = () =>{
     const [links, setLinks] = React.useState({});
