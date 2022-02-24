@@ -10,7 +10,6 @@ const Social = () =>{
             setLinks(res.data);
         });
     }, []);
-    console.log(Object.entries(links));
     return(
         <SocialWrapper>
             {

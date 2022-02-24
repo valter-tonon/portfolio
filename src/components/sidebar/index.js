@@ -11,10 +11,12 @@ const SideBar = () =>{
     const [user, setUser] = useState({})
 
     useEffect(() => {
-        httpApi.get('user-info').then(res => {
-            setUser(res.data)
-        })
+        getUserInfo()
     },[])
+    async function getUserInfo(){
+        const res = await httpApi.get('user-info')
+        setUser(res.data)
+    }
 
     return (
         <SideWrapper>
@@ -28,5 +30,7 @@ const SideBar = () =>{
         </SideWrapper>
     )
 }
+
+
 
 export default SideBar
