@@ -2,15 +2,19 @@ import React, {useEffect} from 'react'
 import {Div, SkillWrapper} from './style'
 import {TweenMax} from 'gsap'
 import {httpApi} from "../../utils/http/http-axios";
+import {Loading} from "../../components/loader";
 
 
 const Skills = () =>{
     const [skills, setSkills] = React.useState([]);
+    const [isLoading, setIsLoading] = React.useState(true);
 
     useEffect(() => {
         httpApi.get('/skills').then(res => {
             setSkills(res.data);
-        })
+        }).finally(() => {
+            setIsLoading(false);
+        });
     },[])
 
     useEffect(()=>{
@@ -19,18 +23,24 @@ const Skills = () =>{
         })
    },[])
     return (
-        <SkillWrapper className='wrapper'>
+        <>
             {
-                Object.entries(skills).map(([key, value]) => {
-                    return (
-                        <Div key={key}>
-                            <img src={`${process.env.REACT_APP_API_HOST}/storage/${value.image}`} alt={value.name}/>
-                            <h2>{value.name}</h2>
-                        </Div>
-                    )
-                })
+                isLoading ? <Loading/>:
+                    <SkillWrapper className='wrapper'>
+                        {
+                            Object.entries(skills).map(([key, value]) => {
+                                return (
+                                    <Div key={key}>
+                                        <img src={`${process.env.REACT_APP_API_HOST}/storage/${value.image}`} alt={value.name}/>
+                                        <h2>{value.name}</h2>
+                                    </Div>
+                                )
+                            })
+                        }
+                    </SkillWrapper>
             }
-        </SkillWrapper>
+        </>
+
     )
 }
 export default Skills

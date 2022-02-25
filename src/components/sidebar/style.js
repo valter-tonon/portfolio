@@ -12,10 +12,11 @@ export const SideWrapper = styled.section `
     align-items: center;
     border-right:1px solid #666;
     font-family: 'Sen', sans-serif;
-    
-    
+    z-index: 1;
+    //position: fixed;
 
-    img{
+
+  img{
         width: 8rem;
         height:8rem;
         background:none;
